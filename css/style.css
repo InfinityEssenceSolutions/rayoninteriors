@@ -250,6 +250,27 @@ header .intro-text {
 ul.cat li {
 	display: inline-block;
 }
+
+.fixed-whatsapp {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px;  /* Adjust the distance from the right */
+    z-index: 1000; /* Make sure it stays on top of other content */
+    border-radius: 50%; /* Makes the button circular (optional, if you prefer rounded edges) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow for better visibility */
+    transition: transform 0.3s ease-in-out; /* Optional: smooth transition when hovered */
+}
+
+.fixed-whatsapp:hover {
+    transform: scale(1.1); /* Optional: Makes the button slightly bigger when hovered */
+}
+
+.fixed-whatsapp img {
+    border-radius: 50%; /* Makes the image circular */
+    width: 60px; /* Adjust the width of the WhatsApp icon */
+    height: 60px; /* Adjust the height of the WhatsApp icon */
+}
+
 ol.type li {
 	display: inline-block;
 	margin-left: 20px;
