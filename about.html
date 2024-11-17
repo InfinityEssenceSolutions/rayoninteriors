@@ -1,204 +1,343 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rayon Interiors</title>
-<meta name="description" content="">
-<meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicons
-    ================================================== -->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+        <title>Rayon Interiors</title>
 
-<!-- Stylesheet
-    ================================================== -->
-<link rel="stylesheet" type="text/css"  href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <!-- Lightbox2 CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Lightbox2 JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+        <link href="css/vegas.min.css" rel="stylesheet">
+        <link href="css/tooplate-barista.css" rel="stylesheet"><u></u>
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+        <style>
+            /* Card Container */
+            .custom-card {
+                background-color: #566241; /* Set the background color */
+                border-radius: 10px; /* Rounded corners */
+                overflow: hidden; /* Ensure content stays within bounds */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            }
+
+            /* Image Section */
+            .custom-card-image img {
+                width: 100%; /* Ensure full width */
+                height: auto; /* Maintain aspect ratio */
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            /* Content Section */
+            .custom-card-body {
+                padding: 20px; /* Space around text */
+                color: #ffffff; /* Text color */
+            }
+
+            /* Title Styling */
+            .custom-card-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            /* Text Styling */
+            .custom-card-text {
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+
+            /* Read More Link Styling */
+            .custom-card-text .read-more {
+                color: #f7c02c; /* Highlight color for 'Read more' */
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .custom-card-text .read-more:hover {
+                text-decoration: underline; /* Underline on hover */
+            }
+            .team-block-image {
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .team-block-image.clicked {
+                transform: scale(1.05); /* Slight zoom effect */
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glow effect */
+            }
+
+            </style>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-<!-- Navigation
-    ==========================================-->
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top"><img src = "img/logo_ri.jpg" style = "width:100px;height:100px;border-radius: 50%;"></a> </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html" class="page-scroll">Home</a></li>
-        <li><a href="about.html" class="page-scroll">About</a></li>
-        <li><a href="service.html" class="page-scroll">Services</a></li>
-        <li><a href="project.html" class="page-scroll">Projects</a></li>
-        <li><a href="contact.html" class="page-scroll">Contact</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-</nav>
-<!-- Header -->
-<header id="header">
-  <div class="intro">
-    <div class="overlay">
-      <div class="container">
-        <div class="row">
-          <div class="intro-text">
-            <h1><strong>Rayon</strong> <span></span> Interiors</h1>
-            <p>Making Brighter and Promising Spaces.</p>
-            <a href="contact.html" class="btn btn-custom btn-lg page-scroll">Contact Us</a> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- About Section -->
-<div id="about">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>About Us</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-6 text-center"> <img src="img/about.webp" class="img-responsive" alt=""> <p>Rayon interiors was established in the year 2014 with an ambition to make a huge difference in the interior design industry. We don’t just deliver a service, but we also deliver a promise that our customers cherish for a lifetime in the form of furnished and notable residential and commercial spaces. We have an excellent clientele that keeps us motivated to work hard and provide each of them a delightful experience for choosing us.
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+                    <img src="images/logo_ri.png" class="" style = "width:150px; height: auto;" alt="Rayon Interiors">
+                    Interiors
+                </a>
 
-        </p></div>
-      <div class="col-xs-12 col-md-6">
-        <div class="about-text">
-            <p>We are an expert team of architects, interior designers, project engineers, production engineers, purchase department, survey department and skilled technicians who work together to make many dreams turn into a reality. We stand out in terms of quality consciousness and excellent design concepts. Material management and people management are the key components of our turnkey projects and our team handles them with ease.Along with residential and commercial projects we also specialize in hospitality, architecture works, landscaping and walk throughs.  Apart from these, our customers can even get the services customised by adding further details to the project. The comprehensive list of the services we provide is given below.</p>
-              <h3>Quality Assurance</h3>
-              <p>Our goal is to implement exceptional designs without compromising on quality.  We strongly believe that quality is the most crucial element that binds our relationship with our clients forever and also leaves a lasting impression on our project. We have an eminent quality control team which thoroughly monitors each product that we use in our projects and also gives us suggestions for improvement. We also have a research team that keeps us updated on what’s new in the market that can be used to enhance our designs.</p>
-              <h3>Technical information</h3>
-              <p>We follow a state of the art approach to our design and implementation patterns.We have a dedicated team of proffessionals who let you experience the joy of having a glimpse of your dream project even before it is actually initiated. This is done through a 2 minute 3D vedio which runs the client through every detail of the project by making it more convincing and appealing to them.</p>
-              <h3>We Service</h3>
-              <p>
-                <li>Construction companies</li>
-                <li>Hotels and Restaurants</li>
-                <li>Marriage Halls</li>
-                <li>Temples</li>
-                <li>Hospitals</li>
-                <li>Cateens</li>
-                <li>Retail Malls</li>
-                <li>Entertainment Centres</li>
-              </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Contact Section -->
-<div id="contact">
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Contact Us</h2>
-        <hr>
-        <p>Get in touch and let’s bring your vision to life.</p>
-      </div>
-      <div class="col-md-12">
-        <!-- <h3>Contact Info</h3> -->
-        <div calss = "row">
-          <div class = "col-md-4">
-            <div class="contact-item"><h5 style = "color:#a7c44c"><i class="fa fa-home me-2"></i> Address</h5>
-              <p><a href = "https://g.page/rayoninteriors?share" class = "text-dark">Rayon Interiors
-                Address:Door no.26-8-56 near 3 Bommala center , nagaram palem, Revenue ward 10, guntur- 522004</a></p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="project.html">Projects</a>
+                        </li>
+
+                        <!-- <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                        </li> -->
+                    </ul>
+
+                    <div class="ms-lg-3">
+                        <a class="btn custom-btn custom-border-btn text-white" href="reservation.html">
+                            Contact
+                            <!-- <i class="bi-arrow-up-right ms-2"></i> -->
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class = "col-md-4">
-            <div class="contact-item"> <h5 style = "color:#a7c44c"><i class="fa fa-envelope me-3"></i> Email</h5>
-              <p><a href = "mailto:rayoninteriors@gmail.com" class = "text-dark">rayoninteriors@gmail.com</a></p>
-            </div>
-          </div>
-          <div class = "col-md-4">
-            <div class="contact-item"> <h5 style = "color:#a7c44c"><i class="fa fa-phone me-2"></i> Phone</h5>
-              <p><a href = "tel:+91 9959084935" class = "text-dark">+91 9959084935</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="col-md-8">
-        <h3>Leave us a message</h3>
-        <form name="sentMessage" id="contactForm" novalidate method="POST" action="contact_me.php">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" id="name" name="name" class="form-control" placeholder="Name" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-            <p class="help-block text-danger"></p>
-          </div>
-          <div id="success"></div>
-          <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
-        </form>
+        </nav>
 
-      </div> -->
-    </div>
-  </div>
-</div>
-<!-- Services Section -->
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1" style="height: 100vh; background: #000;">
+            <img src="images/banner_1.jpg" alt="Banner" class="img-fluid w-100" style="object-fit: cover; height: 100%;">
+        </section>
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="section-overlay"></div>
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6 col-12">
+                        <div class="ratio ratio-1x1">
+                            <img class = "custome-video" src="images/about.webp">
+                            <!-- <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                                <source src="videos/pexels-mike-jones-9046237.mp4" type="video/mp4">
+
+                                Your browser does not support the video tag.
+                            </video> -->
+
+                            <div class="about-video-info d-flex flex-column">
+                                <h4 class="mt-auto">We Started Since 2014.</h4>
+
+                                <h4>Best Interiors in Guntur.</h4>
+                            </div>
+                        </div>
+                        <h2 class="text-white mb-3">Quality Assurance</h2><br>
+                        <p class="text-white" style = "font-size:18px;">Our goal is to implement exceptional designs without compromising on quality.  We strongly believe that quality is the most crucial element that binds our relationship with our clients forever and also leaves a lasting impression on our project. We have an eminent quality control team which thoroughly monitors each product that we use in our projects and also gives us suggestions for improvement. We also have a research team that keeps us updated on what’s new in the market that can be used to enhance our designs.</p>
+
+                    </div>
+
+                    <div class="col-lg-5 col-12 mt-4 mt-lg-0 mx-auto">
+                        <em class="text-white">Interiors</em>
+
+                        <h2 class="text-white mb-3">Rayon Interiors</h2>
+
+                        <p class="text-white" style = "font-size:18px;">Rayon interiors was established in the year 2014 with an ambition to make a huge difference in the interior design industry. We don’t just deliver a service, but we also deliver a promise that our customers cherish for a lifetime in the form of furnished and notable residential and commercial spaces. We have an excellent clientele that keeps us motivated to work hard and provide each of them a delightful experience for choosing us.</p>
+
+                        <p class="text-white" style = "font-size:18px;">We are an expert team of architects, interior designers, project engineers, production engineers, purchase department, survey department and skilled technicians who work together to make many dreams turn into a reality. We stand out in terms of quality consciousness and excellent design concepts. Material management and people management are the key components of our turnkey projects and our team handles them with ease.Along with residential and commercial projects we also specialize in hospitality, architecture works, landscaping and walk throughs.  Apart from these, our customers can even get the services customised by adding further details to the project. The comprehensive list of the services we provide is given below.</p>
+
+                        <h2 class="text-white mb-3">Technical information</h2>
+
+                        <p class="text-white" style = "font-size:18px;">We follow a state of the art approach to our design and implementation patterns.We have a dedicated team of proffessionals who let you experience the joy of having a glimpse of your dream project even before it is actually initiated. This is done through a 2 minute 3D vedio which runs the client through every detail of the project by making it more convincing and appealing to them.</p>
+
+                        <h4 class="text-white mb-3">We Service</h4>
+                        <p class = "text-white" style = "font-size:18px;">
+                            <ul class = "text-white">
+                                <li class = "text-white">Construction companies</li>
+                                <li class = "text-white">Hotels and Restaurants</li>
+                                <li class = "text-white">Marriage Halls</li>
+                                <li class = "text-white">Temples</li>
+                                <li class = "text-white">Hospitals</li>
+                                <li class = "text-white">Cateens</li>
+                                <li class = "text-white">Retail Malls</li>
+                                <li class = "text-white">Entertainment Centres</li>
+                            </ul>
+                        </p>
+
+                        <a href="reservation.html" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4"><button type="submit" class="form-control">Contact Us</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="barista-section section-padding section-bg" id="barista-team">
+            <div class="section-overlay"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-12">
+                        <div class="ratio ratio-1x1">
+                            <img class = "custome-video" src="images/about.webp">
+                            <!-- <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                                <source src="videos/pexels-mike-jones-9046237.mp4" type="video/mp4">
+
+                                Your browser does not support the video tag.
+                            </video> -->
+
+                            <div class="about-video-info d-flex flex-column">
+                                <h4 class="mt-auto">We Started Since 2014.</h4>
+
+                                <h4>Best Interiors in Guntur.</h4>
+                            </div>
+                        </div>
 
 
-</div>
-<!-- Contact Section -->
+                    </div>
 
-<div id="footer">
-    <div class="container text-center">
-      <img src = "img/logo_ri.png" >
-      <div class="social">
-        <ul>
-          <li><a href="https://www.facebook.com/rayoninteriors/"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://rayoninteriors.com/"><i class="fa fa-globe"></i></a></li>
-          <li><a href="https://g.page/rayoninteriors?share"><i class="fa fa-home"></i></a></li>
-          <li><a href="https://instagram.com/rayoninteriors?igshid=1kr6jexrqv8t8"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UC1sNndnUq1Q6p3Gspe2Fadg?view_as=subscriber"><i class="fa fa-youtube"></i></a></li>
-        </ul>
-      </div>
-      <div>
-        <p class = "text-white">&copy; <script>document.write(new Date().getFullYear());</script> Rayon Interiors. All Rights Reserved.</p>
-      </div>
-      <div class="footer-section text-white">
-        <p>Designed By IES.</p>
-      </div>
-    </div>
-  </div>
-  <a class="btn btn-lg-square whatsapp fixed-whatsapp" href="https://wa.me/919959084935?text=Hii%20there,%20I%20want%20to%20know%20more%20about%20Interios.%20Let%E2%80%99s%20discuss" target="_blank">
-    <!-- <i class="fab fa-whatsapp"></i> -->
-    <img src="img/whatsapp.jpeg" style="width:50px; height:50px; border-radius: 20px;">
-</a>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/SmoothScroll.js"></script>
-<script type="text/javascript" src="js/nivo-lightbox.js"></script>
-<script type="text/javascript" src="js/jquery.isotope.js"></script>
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-<script type="text/javascript" src="js/contact_me.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+                    <div class="col-lg-5 col-12 mt-4 mt-lg-0 mx-auto">
+                        <em class="text-white">Making Brighter and Promising Spaces.</em>
+
+                        <h2 class="text-white mb-3">Sasi Manoj</h2>
+
+                        <p class="text-white" style = "font-size:18px;">Being creative is being able to do incredible things in an unpredictable manner. Passion and determination here, become those driving forces that unbind the threads of creativity inside a person. However, if you are tired of putting things together and surfing the internet for inspiration, here is whom you should approach, the creative guru and the gushing bundle of ideas, Mr. Sasi Manoj.</p>
+
+                        <p class="text-white" style = "font-size:18px;">This man is known for his ingenuity and his art of turning the most regular or dull space into an amazing dwelling area incorporated with details that makes you go awestruck. “Arched eyebrows with a broad smile, hugs and handshakes, expressions like “Stunning!”, “Wow!” are a few instant responses that I come across once my clients get the final look of the project,” says the young designer who is also the founder of Rayon Interiors. Every work that gets done at Rayon interiors is done with great precision and devotion, as this is exactly what this man had lived all his life for. By setting his sights on entrepreneurship, he ignored all offers that came his way from renowned design agencies across the globe.  Although, born and brought up in Guntur, Andhra Pradesh, his craving for designing led him to Hyderabad where he got his bachelors degree in designing, from a meritorious college in the city. Ever since then he had been living his dream by serving as a thoughtful and helpful host for all his clients and by putting forth unbeatable designs for all kinds of spaces.</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-12 me-auto">
+                        <em class="text-white d-block mb-4">Get in touch and let’s bring your vision to life.</em>
+
+                        <strong class="text-white">
+                            <i class="bi-geo-alt me-2"></i>
+                            Rayon Interiors
+                            Address:Door no.26-8-56 near 3 Bommala center , nagaram palem, Revenue ward 10, guntur- 522004
+                        </strong>
+
+                        <ul class="social-icon mt-4">
+                            <li class="social-icon-item"><a href="https://www.facebook.com/rayoninteriors/" class = "text-white me-2"><i class="fa fa-facebook"></i></a></li>
+                            <li class="social-icon-item"><a href="https://rayoninteriors.com/" class = "text-white me-2"><i class="fa fa-globe"></i></a></li>
+                            <li class="social-icon-item"><a href="https://g.page/rayoninteriors?share" class = "text-white me-2"><i class="fa fa-home"></i></a></li>
+                            <li class="social-icon-item"><a href="https://instagram.com/rayoninteriors?igshid=1kr6jexrqv8t8" class = "text-white me-2"><i class="fa fa-instagram"></i></a></li>
+                            <li class="social-icon-item"><a href="https://www.youtube.com/channel/UC1sNndnUq1Q6p3Gspe2Fadg?view_as=subscriber" class = "text-white me-2"><i class="fa fa-youtube"></i></a></li>
+                          </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+                        <em class="text-white d-block mb-4">Contact</em>
+
+                        <p class="d-flex mb-1">
+                            <strong class="me-2">Phone:</strong>
+                            <a href="tel:+91 9959084935" class="site-footer-link">
+                                +91 9959084935
+                            </a>
+                        </p>
+
+                        <p class="d-flex">
+                            <strong class="me-2">Email:</strong>
+
+                            <a href="mailto:rayoninteriors@gmail.com" class="site-footer-link">
+                                rayoninteriors@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-lg-3 col-12">
+                        <em class="text-white d-block mb-4">Projects.</em>
+
+                        <ul class="opening-hours-list">
+                            <li class="d-flex">
+
+                                <!-- <span class="underline"></span> -->
+
+                                <strong>Master Bedroom</strong>
+                            </li>
+
+                            <li class="d-flex">
+
+                                <!-- <span class="underline"></span> -->
+
+                                <strong>Kids Room</strong>
+                            </li>
+
+                            <li class="d-flex">
+                                <!-- Sunday
+                                <span class="underline"></span> -->
+
+                                <strong>Guest Room</strong>
+                            </li>
+                            <li class="d-flex">
+                                <!-- Sunday
+                                <span class="underline"></span> -->
+
+                                <strong>Common Areas</strong>
+                            </li>
+                            <li class="d-flex">
+                                <!-- Sunday
+                                <span class="underline"></span> -->
+
+                                <strong>Kitchen</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-12">
+                        <!--  -->
+                    </div>
+
+
+                    <div class="col-lg-8 col-12 mt-4">
+                        <p class="copyright-text mb-0">Copyright © Rayon Interiors <script>document.write(new Date().getFullYear());</script>
+                            - Design: <a rel="sponsored" href="https://wa.me/919398819193?text=Hii%20there,%20I%20want%20to%20know%20more%20about%20Services.%20Let%E2%80%99s%20discuss" target="_blank">IES</a></p>
+                    </div>
+            </div>
+        </footer>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>
